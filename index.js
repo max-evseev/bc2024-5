@@ -20,7 +20,7 @@ const options = program.opts();
         res.status(201).send("note created");
         }
         else {
-        res.status(404).send("note already exists under that name");
+        res.status(400).send("note already exists under that name");
         }
     });
     app.get('/notes', (req, res) => {
